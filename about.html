@@ -10,10 +10,16 @@
 
     <nav class="navbar">
         <div class="logo">云起文化</div>
-        <ul class="nav-links">
+        <button class="menu-toggle" aria-label="切换菜单" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html">首页</a></li>
             <li><a href="about.html" class="active">关于云起</a></li>
             <li><a href="services.html">业务领域</a></li>
+            <li><a href="contact.html">联系我们</a></li>
         </ul>
     </nav>
 
@@ -31,8 +37,8 @@
             <img src="https://images.unsplash.com/photo-1503899036084-c55cdd92da26?auto=format&fit=crop&w=1200&q=80" alt="东方美学空间展示">
         </div>
 
-        <!-- 嵌入B站或YouTube视频（以B站嵌为例，替换src即可） -->
-        <h2>宣传视频</h2>
+        <!-- 嵌入视频（支持哔哩哔哩 / YouTube 等） -->
+        <h2 style="margin-top: 3rem;">宣传视频</h2>
         <div class="video-container">
             <iframe src="https://player.bilibili.com/player.html?bvid=BV1GJ411x7vy&page=1&high_quality=1&danmaku=0" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe>
         </div>
@@ -41,6 +47,13 @@
     <footer>
         <p>&copy; 2026 深圳市云起文化传播有限公司 版权所有</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('open');
+        }
+    </script>
 
 </body>
 </html>

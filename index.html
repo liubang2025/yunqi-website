@@ -10,10 +10,17 @@
 
     <nav class="navbar">
         <div class="logo">云起文化</div>
-        <ul class="nav-links">
+        <!-- 移动端菜单按钮 -->
+        <button class="menu-toggle" aria-label="切换菜单" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
             <li><a href="index.html" class="active">首页</a></li>
             <li><a href="about.html">关于云起</a></li>
             <li><a href="services.html">业务领域</a></li>
+            <li><a href="contact.html">联系我们</a></li>
         </ul>
     </nav>
 
@@ -26,7 +33,10 @@
     </header>
 
     <section class="container intro">
-        <h2>核心理念</h2>
+        <div class="page-header">
+            <h2>核心理念</h2>
+            <p>融合传统东方沉静美学与当代视觉表达</p>
+        </div>
         <div class="grid-2">
             <div class="card">
                 <h3>文化传承</h3>
@@ -42,6 +52,13 @@
     <footer>
         <p>&copy; 2026 深圳市云起文化传播有限公司 版权所有</p>
     </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('open');
+        }
+    </script>
 
 </body>
 </html>

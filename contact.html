@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>联系我们 - 深圳市云起文化传播有限公司</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">云起文化</div>
+        <button class="menu-toggle" aria-label="切换菜单" onclick="toggleMenu()">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">首页</a></li>
+            <li><a href="about.html">关于云起</a></li>
+            <li><a href="services.html">业务领域</a></li>
+            <li><a href="contact.html" class="active">联系我们</a></li>
+        </ul>
+    </nav>
+
+    <section class="container page-header">
+        <h1>与云起同行</h1>
+        <p>如需业务咨询、合作沟通或艺术策展，欢迎随时与我们联系。</p>
+    </section>
+
+    <section class="container">
+        <div class="contact-wrapper">
+            <!-- 左侧：公司基本信息 -->
+            <div class="contact-info">
+                <h3>深圳市云起文化传播有限公司</h3>
+                <p><strong>地址：</strong>深圳市南山区文化创意产业园区</p>
+                <p><strong>邮箱：</strong>contact@yunqi.com</p>
+                <p><strong>工作时间：</strong>周一至周五 09:30 - 18:30</p>
+                <div class="info-note">
+                    <p>我们将在收到您的留言后 1-2 个工作日内给予答复，感谢您的信任。</p>
+                </div>
+            </div>
+
+            <!-- 右侧：Netlify 免费自动接收表单 -->
+            <div class="contact-form-card">
+                <form name="contact" method="POST" data-netlify="true">
+                    <input type="hidden" name="form-name" value="contact" />
+
+                    <div class="form-group">
+                        <label for="name">您的姓名 / 称呼 *</label>
+                        <input type="text" id="name" name="name" required placeholder="例如：张先生">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">联系邮箱 *</label>
+                        <input type="email" id="email" name="email" required placeholder="example@domain.com">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">联系电话</label>
+                        <input type="tel" id="phone" name="phone" placeholder="选填">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">留言内容 *</label>
+                        <textarea id="message" name="message" rows="5" required placeholder="请简要描述您的合作需求或咨询内容..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-submit">发送留言</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 深圳市云起文化传播有限公司 版权所有</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.getElementById('navLinks');
+            nav.classList.toggle('open');
+        }
+    </script>
+
+</body>
+</html>
